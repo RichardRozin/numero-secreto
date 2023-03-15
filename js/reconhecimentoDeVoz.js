@@ -41,10 +41,10 @@ function onSpeak(evento){
 }
 
 recognition.addEventListener('end', function(){
-    if (numero != numeroSecreto){
-        recognition.start()
+    recognition.start()
+    if(numero == numeroSecreto){
+        recognition.end()
     }
-    
 })
 
 
