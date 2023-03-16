@@ -32,8 +32,10 @@ function onSpeak(evento){
             //-----------------------------------------
 
         }else if(numero < numeroSecreto){
+            invalido.style.color = 'yellow'
             invalido.innerHTML = `O numero secreto é MAIOR que ${numero}.`
         }else{
+            invalido.style.color = 'yellow'
             invalido.innerHTML = `O numero secreto é MENOR que ${numero}.`
         }
     
@@ -42,9 +44,6 @@ function onSpeak(evento){
 
 recognition.addEventListener('end', function(){
     recognition.start()
-    if(numero == numeroSecreto){
-        recognition.end()
-    }
 })
 
 
